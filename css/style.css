@@ -1,9 +1,26 @@
 .container {
     width: 1366px;
     font-family: sans-serif;
-    background-color: gray;
     margin: 0 auto;
-}
+    background-image: url('../img/background_milan.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* todo fix height */
+   }
+
+/* .container::before {
+    width: 1366px;
+    height: 768px;
+    content: "";
+    position: fixed;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    filter: blur(12px);
+    no good solution https://stackoverflow.com/questions/20039765/how-to-apply-a-css-3-blur-filter-to-a-background-image
+ } */
 
 header {
     margin-bottom: 45px;
@@ -15,6 +32,12 @@ header {
     margin-top: 49px;
     display: block;
     text-decoration: none;
+    color: #fff;
+}
+
+.logo:hover .logo-image {
+    color: #f26522
+    /* how to change image? export new? */
 }
 
 .contact-section {
@@ -34,7 +57,6 @@ header {
     text-transform: uppercase;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
-    color: #fff;
 }
 
 .text-milan {
@@ -70,7 +92,7 @@ header {
 }
 
 .card {
-    width: 307px;
+    width: 311px;
     margin-right: 65px;
     float: left;
     text-align: center;
@@ -81,7 +103,7 @@ header {
 }
 
 .card:nth-child(3n+2) {
-    width: 308px;
+    width: 312px;
 }
 
 .bg-cover {
