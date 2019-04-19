@@ -5,22 +5,9 @@
     background-image: url('../img/background_milan.png');
     background-repeat: no-repeat;
     background-size: cover;
-    /* todo fix height */
+    padding-bottom: 20px;
+    /* todo fix height 3px overflow 768 vs 765 paddings? */
    }
-
-/* .container::before {
-    width: 1366px;
-    height: 768px;
-    content: "";
-    position: fixed;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    display: block;
-    filter: blur(12px);
-    no good solution https://stackoverflow.com/questions/20039765/how-to-apply-a-css-3-blur-filter-to-a-background-image
- } */
 
 header {
     margin-bottom: 45px;
@@ -35,11 +22,6 @@ header {
     color: #fff;
 }
 
-.logo:hover .logo-image {
-    color: #f26522
-    /* how to change image? export new? */
-}
-
 .contact-section {
     float: right;
     margin-right: 148px;
@@ -47,6 +29,11 @@ header {
 }
 
 .logo-image {
+    width: 46px;
+    height: 44px;
+    background-image: url('../img/logo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     display: inline-block;
     margin-right: 15px;
 }
@@ -58,6 +45,16 @@ header {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
 }
+
+.logo:hover {
+    color: #f26522
+}
+
+.logo:hover > .logo-image {
+    background-image: url('../img/logo_orange.png');
+}
+
+
 
 .text-milan {
     font-size: 29px;
@@ -149,7 +146,6 @@ header {
 
 .footer-text {
     text-align: center;
-    padding-bottom: 20px;
     font-size: 12px;
     color: #fff;
 }
