@@ -1,12 +1,11 @@
-.container {
-    width: 1366px;
+.outer-container {
     font-family: sans-serif;
     margin: 0 auto;
     background-image: url('../img/background_milan.png');
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 20px;
-    /* todo fix height 3px overflow 768 vs 784 paddings line height? */
+    /* fix height 3px overflow 768 vs 786 paddings line height? */
    }
 
 header {
@@ -15,7 +14,6 @@ header {
 
 .logo {
     float: left;
-    margin-left: 155px;
     margin-top: 49px;
     display: block;
     text-decoration: none;
@@ -24,7 +22,6 @@ header {
 
 .contact-section {
     float: right;
-    margin-right: 148px;
     margin-top: 57px;
 }
 
@@ -54,8 +51,6 @@ header {
     background-image: url('../img/logo_orange.png');
 }
 
-
-
 .text-milan {
     font-size: 29px;
     margin-bottom: 9px;
@@ -80,8 +75,7 @@ header {
     text-align: right;
 }
 
-
-.card-view {
+.content-container {
     width: 1064px;
     margin: 0 auto;
     font-size: 18px;
@@ -95,20 +89,25 @@ header {
     text-align: center;
 }
 
-.card:nth-child(3n) {
+.card:nth-of-type(3n) {
     margin-right: 0px;
 }
 
-.card:nth-child(3n+2) {
+.card:nth-of-type(3n+2),
+.card-tooltip:nth-of-type(3n+2) {
     width: 312px;
 }
 
-.bg-cover {
-    border: 2px solid white;
+.img-content {
+    padding: 2px;
     height: 200px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 20px;
+    background: linear-gradient(to top, transparent, #626262 10%, #fefefe);
+}
+
+.overflow-container {
+    overflow: hidden;
+    position: relative;
+    line-height: 0.5;
 }
 
 .card-link {
@@ -116,31 +115,65 @@ header {
     color: #fff;
 }
 
-.card1 {
-    background-image: url("../img/card1.png");
+.card-link:hover > .activity-text{
+    color: #f26522;
 }
 
-.card2 {
-    background-image: url("../img/card2.png");
+.card-link:hover .card-tooltip {
+    bottom: 0;
 }
 
-.card3 {
-    background-image: url("../img/card3.png");
+.card-tooltip {
+    bottom: -63px;
+    width: 311px;
+    height: 63px;
+    background-color: #f26522;
+    position: absolute;
+    transition: bottom 0.3s ease;
 }
 
-.card4 {
-    background-image: url("../img/card4.png");   
+.tooltip-price-content {
+    margin: 16px 0 17px 21px;
+    float: left;
+    width: 50px;
+    text-align: left;
 }
 
-.card5 {
-    background-image: url("../img/card5.png");
+.from-text {
+    font-size: 10px;
+    margin-bottom: 7px;
+    line-height: 0.8;
 }
 
-.card6 {
-    background-image: url("../img/card6.png");
+.price {
+    font-size: 20px;
+    line-height: 0.75;
+}
+
+.tooltip-details {
+    float: right;
+    margin: 35px 40px 17px 0;
+    font-size: 14px;
+    line-height: 0.8;
+}
+
+.view-details {
+    position: relative;
+}
+
+.view-details::after {
+    position: absolute;
+    content: "";
+    right: -18px;
+    width: 7px;
+    height: 10px;
+    background-image: url(../img/arrow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .activity-text {
+    margin-top: 20px;
     margin-bottom: 55px;
 }
 
